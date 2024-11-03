@@ -1,0 +1,1413 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Outfit:wght@100..900&family=Poetsen+One&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgb(243, 243, 243);
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  background: url(./img/header.png);
+  height: 440px;
+  width: 100%;
+  background-size: cover;
+  box-shadow: inset 50px 60px 70px rgba(0, 0, 0, 0.299);
+}
+
+nav {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+nav .top-menu {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px 10px;
+}
+
+.menu i,
+.menu a {
+  margin-left: 5px;
+  color: white;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.menu a {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.menu + div {
+  width: 700px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu-left a {
+  color: white;
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.top-content {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.main-head {
+  color: rgb(232, 232, 232);
+  font-family: "Poetsen One", sans-serif;
+  font-size: 5.8rem;
+  margin-top: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.top-content p {
+  text-align: center;
+  color: white;
+  font-family: "Outfit", sans-serif;
+  font-size: 2.1rem;
+  margin-bottom: 2rem;
+}
+
+.top-content form {
+  width: 750px;
+  height: 55px;
+  background-color: white;
+  margin: 0 auto;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+form {
+  display: flex;
+  border: 3px solid transparent;
+}
+
+form img {
+  width: 48px;
+  height: 25px;
+  align-self: center;
+  justify-self: center;
+  padding-left: 10px;
+}
+
+form #location {
+  width: 220px;
+  height: inherit;
+  background: transparent;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 100;
+  padding: 10px;
+  margin: 0px 20px 0px 0px;
+  position: relative;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: gray;
+}
+
+.search-icon {
+  color: gray;
+  font-size: 1.3rem;
+  font-weight: 400;
+  align-self: center;
+}
+
+#search-box {
+  width: 100%;
+  border: transparent;
+  padding-left: 20px;
+  font-size: 0.9rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+main {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.top-post {
+  display: flex;
+  margin: 2rem 0rem;
+  justify-content: space-evenly;
+  gap: 1.5rem;
+}
+
+.card {
+  overflow: hidden;
+  width: 380px;
+  height: 280px;
+  border-radius: 20px;
+  background-color: white;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  box-shadow: 2px 2px 05px rgba(0, 0, 0, 0.132);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card .image {
+  overflow: hidden;
+  max-width: 100%;
+  max-height: 180px;
+  object-fit: cover;
+}
+
+.card .image img {
+  position: relative;
+  top: -20px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s ease-out;
+}
+
+.card .image img:hover {
+  transform: scale(1.1);
+}
+
+.card h6 {
+  font-family: "Outfit", sans-serif;
+  font-size: 1.5rem;
+  color: rgb(0, 0, 0);
+  font-weight: 400;
+  padding: 10px 0px 10px 20px;
+}
+
+.card p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: rgb(110, 110, 110);
+  font-weight: 400;
+  padding: 0px 0px 0px 20px;
+}
+
+.collections {
+  display: grid;
+}
+
+.collections h2 {
+  font-family: "Outfit", sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.collections .collection-para {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  align-items: center;
+}
+
+.collection-para p {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: rgb(120, 117, 117);
+  font-weight: 400;
+}
+
+.collection-para a {
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  color: rgb(229, 104, 104);
+  font-weight: 400;
+  position: relative;
+  padding-right: 2rem;
+}
+
+.collection-para a:after {
+  content: "";
+  position: absolute;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 10px solid rgb(229, 104, 104);
+  border-right: none;
+  top: 6px;
+  right: 12px;
+}
+
+.collection-cards {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 2rem;
+  gap: 1rem;
+  height: 400px;
+}
+
+.collect-card {
+  width: 300px;
+  height: inherit;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  align-items: end;
+  cursor: pointer;
+}
+
+.collect-card p,
+.places {
+  font-family: "Poppins", sans-serif;
+  color: rgb(204, 202, 202);
+  position: relative;
+  margin: 0.5rem 1rem;
+  transition: all 0.3s ease;
+  transform: scale(0.5);
+  opacity: 0;
+}
+
+.collect-card:hover p:not(.places) {
+  bottom: -150px;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.collect-card:hover .places {
+  bottom: 20px;
+  transform: scale(1);
+  opacity: 1;
+}
+
+.collect-card p:not(.places) {
+  font-size: 21px;
+  font-weight: 600;
+  bottom: -250px;
+}
+
+.places {
+  font-family: "Outfit", sans-serif;
+  padding-left: 1rem;
+  font-size: 12px;
+  bottom: -40px;
+  position: relative;
+}
+
+.places::after {
+  content: "";
+  position: absolute;
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent;
+  border-left: 10px solid rgb(204, 202, 202);
+  top: 5px;
+  left: 80px;
+}
+
+.collect-card:nth-of-type(1) {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgb(0, 0, 0)),
+    url(./img/newly\ opened\ restaurant.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.collect-card:nth-of-type(2) {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgb(0, 0, 0)),
+    url(./img/watch\ livescreening.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.collect-card:nth-of-type(3) {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgb(0, 0, 0)),
+    url(./img/sea\ view\ dinner.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.collect-card:nth-of-type(4) {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.1), rgb(0, 0, 0)),
+    url(./img/insta\ worthy\ place.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.location-list {
+  /* border: 2px solid black; */
+  margin: 2rem 0rem;
+}
+
+.location-list h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.popular-locations {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem 1rem;
+  margin-bottom: 5rem;
+}
+
+.location-card {
+  /* border: 2px solid red; */
+  background-color: rgb(245, 245, 245);
+  width: 400px;
+  height: 90px;
+  border-radius: 10px;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s ease-in;
+  border: 0.1px solid transparent;
+}
+
+.location-card h6 {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  padding: 10px 0px 0px 20px;
+  color: rgb(96, 96, 96);
+}
+
+.location-card p {
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 1.1rem;
+  padding: 05px 0px 0px 20px;
+  color: rgb(0, 0, 0);
+}
+
+.location-card::after {
+  content: "";
+  position: absolute;
+  border-width: 0px 3px 3px 0px;
+  border-color: rgb(54, 54, 54);
+  border-style: solid;
+  top: 40px;
+  right: 20px;
+  padding: 4px;
+  transform: rotateZ(315deg);
+}
+
+.location-card:nth-child(9) p {
+  font-size: 24px;
+  padding: 30px 0px 0px 0px;
+  text-align: center;
+  color: rgb(95, 95, 95);
+  font-family: "Lato", sans-serif;
+}
+
+.location-card:nth-child(9)::after {
+  padding: 4px;
+  right: 130px;
+  top: 38px;
+  transform: rotateZ(45deg);
+}
+
+.location-card:hover {
+  /* border: 0.5px solid rgb(78, 78, 78); */
+  box-shadow: 0px 5px 10px rgba(77, 77, 77, 0.232), 0px 0px 0px black;
+}
+
+.get-app {
+  width: 1200px;
+  background-color: rgba(255, 255, 222, 0.388);
+  margin: 2rem 0rem;
+}
+
+.getapp-two-screen {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0rem;
+  gap: 2rem;
+}
+
+.getapp-image {
+  max-width: 400px;
+  display: flex;
+  justify-content: center;
+  padding: 2rem 0rem;
+  justify-self: end;
+}
+
+.getapp-image img {
+  width: 300px;
+}
+
+.getapp-details {
+  justify-self: start;
+  width: 550px;
+  height: 350px;
+  padding: 0rem 1rem;
+}
+
+.getapp-details h3 {
+  font-family: "Outfit", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 400;
+  margin: 0.5rem 0rem 0.2rem;
+}
+
+.getapp-details p {
+  font-family: "Lato", sans-serif;
+  font-size: 1.2rem;
+  color: grey;
+  font-weight: 500;
+  margin: 0rem 0rem 0.8rem;
+  line-height: 1.5rem;
+}
+
+.getapp-form {
+  display: grid;
+}
+
+.getapp-details form input {
+}
+
+.inputfields {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.getapp-details form input[type="email"] {
+  margin: 0.8rem 0rem;
+  width: 350px;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0.322);
+  border-radius: 5px;
+  font-size: 20px;
+  padding-left: 20px;
+}
+
+.getapp-details form input[type="email"]::placeholder {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 1.4rem;
+}
+
+.getapp-details form input[type="submit"] {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  margin: 0.8rem 0rem;
+  width: 30%;
+  height: 50px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 5px;
+  font-size: 1.4rem;
+  background-color: rgba(255, 0, 0, 0.58);
+  color: aliceblue;
+  cursor: pointer;
+}
+
+.getapp-form + p {
+  font-size: 16px;
+  font-weight: 350;
+}
+
+.getapp-store {
+  display: flex;
+  gap: 1rem;
+}
+
+.getapp-store a {
+  width: 130px;
+  height: 40px;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+.getapp-store a img {
+  width: 130px;
+  height: 40px;
+}
+
+.explore-options {
+  margin: 3rem 0rem;
+}
+
+.explore-options h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.explore-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.explore-card {
+  padding: 1.5rem;
+  /* border: 2px solid red; */
+  background-color: rgb(245, 245, 245);
+  cursor: pointer;
+  position: relative;
+}
+
+.explore-card:hover {
+  box-shadow: 0px 5px 10px rgba(99, 99, 99, 0.315);
+}
+
+.explore-card::after {
+  content: "";
+  position: absolute;
+  border-width: 0px 3px 3px 0px;
+  border-style: solid;
+  border-color: rgb(113, 113, 113);
+  padding: 3px;
+  transform: rotateZ(315deg);
+  right: 3rem;
+  top: 2.2rem;
+}
+
+.explore-card p {
+  font-family: "Lato", sans-serif;
+  font-size: 24px;
+  color: rgb(158, 158, 158);
+}
+
+.page-footer {
+  background-color: rgba(180, 180, 180, 0.1);
+  margin: 3rem 0rem 0rem 0rem;
+}
+
+.footer-width {
+  margin: 0 auto;
+  width: 1200px;
+  border: 1px solid transparent;
+}
+.footer-head {
+  margin: 1rem 1rem;
+}
+
+.footer-head h2 {
+  font-family: "Poetsen One", sans-serif;
+  font-weight: 600;
+  font-size: 2.2rem;
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 3rem 0;
+  gap: 2rem;
+}
+
+.footer-content-card {
+  /* border: 2px solid greenyellow; */
+}
+
+.footer-content-card h6 {
+  /* justify-self: center; */
+  text-align: left;
+  text-transform: uppercase;
+  font-family: "Merriweather", serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  color: rgb(0, 0, 0);
+  cursor: pointer;
+}
+
+.footer-content-card p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  text-align: left;
+  margin-top: 0.1rem;
+  margin-bottom: 0.2rem;
+  color: rgba(52, 52, 52, 0.804);
+  cursor: pointer;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: start;
+  margin-bottom: 2rem;
+  /* border: 2px solid red; */
+}
+
+.social-links li {
+  padding: 5px;
+  background-color: rgba(0, 0, 0, 0.724);
+  border-radius: 50%;
+}
+
+.social-links li a {
+  color: rgba(255, 255, 255, 0.804);
+}
+
+.download-btn {
+  width: 160px;
+  height: 55px;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-bottom: 0.8rem;
+  cursor: pointer;
+}
+
+.download-btn img {
+  object-fit: cover;
+  width: 160px;
+  height: 55px;
+  /* border: 2px solid red; */
+}
+
+.line {
+  background-color: grey;
+  width: 80%;
+  height: 2px;
+  margin: 2rem auto;
+}
+
+.copyright {
+  text-align: center;
+  font-family: "Merriweather", serif;
+  font-weight: 600;
+  font-size: 14px;
+  color: rgb(83, 83, 83);
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 1400px) {
+  header {
+    max-width: 100%;
+  }
+  nav {
+    width: 1024px;
+    margin: 0 auto;
+  }
+  main {
+    width: 1024px;
+  }
+
+  .top-menu {
+  }
+
+  .menu + div {
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .top-content {
+    width: 900px;
+  }
+
+  .top-content form {
+    width: 700px;
+    height: 50px;
+  }
+
+  .top-post {
+    width: 900px;
+    margin: 2rem auto;
+  }
+
+  .card {
+    height: 250px;
+  }
+
+  .card h6 {
+    font-size: 1.5rem;
+    padding: 0px 0px 5px 15px;
+  }
+  .card p {
+    font-size: 0.8rem;
+    padding: 0px 0px 0px 15px;
+  }
+
+  .collections {
+    width: 900px;
+    margin: 0 auto;
+  }
+
+  .collections h2 {
+    font-size: 2rem;
+  }
+
+  .collection-cards {
+    height: 300px;
+    gap: 0rem;
+    justify-content: space-between;
+  }
+
+  .collection-para p,
+  .collection-para a {
+    font-size: 0.8rem;
+  }
+
+  .collection-para a::after {
+    top: 4px;
+    right: 12px;
+  }
+
+  .collect-card {
+    width: 210px;
+  }
+
+  .location-list {
+    width: 900px;
+    margin: 2rem auto;
+  }
+  .location-list h2 {
+    font-size: 2rem;
+  }
+
+  .popular-locations {
+    gap: 1rem;
+  }
+
+  .location-card {
+    width: 280px;
+    height: 70px;
+  }
+  .location-card h6 {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  .location-card p {
+    font-size: 0.9rem;
+  }
+
+  .location-card::after {
+    top: 30px;
+  }
+
+  .location-card:nth-child(9) p {
+    padding: 15px 0px 0px 0px;
+  }
+
+  .location-card:nth-child(9)::after {
+    right: 80px;
+    top: 25px;
+  }
+
+  .get-app {
+    width: 900px;
+    margin: 2rem auto;
+  }
+
+  .explore-options {
+    width: 900px;
+    margin: 3rem auto;
+  }
+
+  .explore-options h2 {
+    font-size: 2rem;
+  }
+
+  .footer-width {
+    width: 900px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  header {
+    max-width: 100%;
+  }
+  nav {
+    width: 1024px;
+    margin: 0 auto;
+  }
+  main {
+    width: 1024px;
+  }
+
+  .top-menu {
+  }
+
+  .menu + div {
+    width: 500px;
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .top-content {
+    width: 900px;
+  }
+
+  .top-content form {
+    width: 700px;
+    height: 50px;
+  }
+
+  .top-post {
+    width: 900px;
+    margin: 2rem auto;
+  }
+
+  .card {
+    height: 250px;
+  }
+
+  .card h6 {
+    font-size: 1.5rem;
+    padding: 0px 0px 5px 15px;
+  }
+  .card p {
+    font-size: 0.8rem;
+    padding: 0px 0px 0px 15px;
+  }
+
+  .collections {
+    width: 900px;
+    margin: 0 auto;
+  }
+
+  .collections h2 {
+    font-size: 2rem;
+  }
+
+  .collection-cards {
+    height: 300px;
+    gap: 0rem;
+    justify-content: space-between;
+  }
+
+  .collection-para p,
+  .collection-para a {
+    font-size: 0.8rem;
+  }
+
+  .collection-para a::after {
+    top: 4px;
+    right: 12px;
+  }
+
+  .collect-card {
+    width: 210px;
+  }
+
+  .location-list {
+    width: 900px;
+    margin: 2rem auto;
+  }
+  .location-list h2 {
+    font-size: 2rem;
+  }
+
+  .popular-locations {
+    gap: 1rem;
+  }
+
+  .location-card {
+    width: 280px;
+    height: 70px;
+  }
+  .location-card h6 {
+    font-size: 1.4rem;
+    font-weight: 500;
+  }
+
+  .location-card p {
+    font-size: 0.9rem;
+  }
+
+  .location-card::after {
+    top: 30px;
+  }
+
+  .location-card:nth-child(9) p {
+    padding: 15px 0px 0px 0px;
+  }
+
+  .location-card:nth-child(9)::after {
+    right: 80px;
+    top: 25px;
+  }
+
+  .get-app {
+    width: 900px;
+    margin: 2rem auto;
+  }
+
+  .explore-options {
+    width: 900px;
+    margin: 3rem auto;
+  }
+
+  .explore-options h2 {
+    font-size: 2rem;
+  }
+
+  .footer-width {
+    width: 900px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    width: 100%;
+  }
+  nav {
+    width: 768px;
+  }
+
+  main {
+    width: 768px;
+  }
+  .top-content {
+    width: 768px;
+  }
+
+  .top-content form {
+    width: 600px;
+  }
+
+  .top-post {
+    width: 700px;
+    margin: 2rem auto;
+  }
+
+  .collections {
+    width: 760px;
+    margin: 0 auto;
+  }
+
+  .collection-cards {
+    width: 768px;
+  }
+
+  .collect-card {
+    width: 180px;
+  }
+
+  .location-list {
+    width: 768px;
+    margin: 2rem auto;
+  }
+
+  .popular-locations {
+    /* grid-template-columns: repeat(2, 1fr); */
+    gap: 0.2rem 0.2rem;
+  }
+
+  .location-card {
+    /* border: 2px solid red; */
+    width: 220px;
+  }
+
+  .location-card::after {
+    right: 10px;
+    top: 30px;
+  }
+
+  .location-card:nth-child(9)::after {
+    right: 35px;
+  }
+
+  .get-app {
+    width: 768px;
+    margin: 2rem auto;
+  }
+  .getapp-two-screen {
+    gap: 1rem;
+  }
+
+  .getapp-image {
+    max-width: 300px;
+  }
+  .getapp-image img {
+    width: 200px;
+  }
+
+  .getapp-details {
+    justify-self: start;
+    width: 350px;
+    height: 350px;
+    padding: 0rem 1rem;
+  }
+
+  .getapp-details h3 {
+    font-size: 2.2rem;
+  }
+
+  .getapp-details p {
+    font-size: 0.9rem;
+  }
+  .inputfields {
+    gap: 0.9rem;
+  }
+  .getapp-details form input[type="email"] {
+    width: 200px;
+    height: 40px;
+  }
+  .getapp-details form input[type="email"]::placeholder {
+    font-size: 0.9rem;
+  }
+  .getapp-details form input[type="submit"] {
+    width: 100px;
+    height: 40px;
+    font-size: 0.9rem;
+  }
+  .explore-options {
+    width: 768px;
+    margin: 3rem auto;
+  }
+
+  .explore-list {
+    margin: 0rem 2rem;
+  }
+
+  .page-footer {
+    width: 768px;
+  }
+
+  .footer-width {
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  .footer-content {
+    gap: 1.5rem;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .footer-content-card h6 {
+    font-size: 1.1rem;
+  }
+}
+
+@media screen and (max-width: 426px) {
+  header {
+    width: 100%;
+    height: 300px;
+  }
+  nav {
+    width: 425px;
+  }
+
+  main {
+    width: 425px;
+  }
+
+  .menu + div {
+    display: none;
+  }
+
+  .top-content {
+    width: 400px;
+  }
+
+  .main-head {
+    font-size: 3rem;
+  }
+
+  .top-content p {
+    font-size: 1.2rem;
+  }
+
+  .top-content form {
+    width: 350px;
+    height: 40px;
+  }
+
+  form #location {
+    width: 90px;
+    font-size: 0.8rem;
+  }
+
+  .search-icon {
+    font-size: 1rem;
+  }
+
+  #search-box {
+    font-size: 0.6rem;
+    padding-left: 10px;
+  }
+
+  .top-post {
+    width: 400px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-content: space-between;
+  }
+  .card {
+    width: 180px;
+    height: 240px;
+    overflow: hidden;
+  }
+  .card .image {
+    /* overflow: hidden; */
+    max-width: 100%;
+    height: 150px;
+    object-fit: cover;
+  }
+
+  .card .image img {
+    position: relative;
+    top: -20px;
+    width: 100%;
+    height: 140px;
+    transition: all 0.3s ease-out;
+  }
+
+  .card h6 {
+    position: relative;
+    top: -20px;
+    padding: 0px 0px 10px 10px;
+  }
+
+  .card p {
+    position: relative;
+    top: -25px;
+    font-size: 0.7rem;
+    padding: 0px 0px 0px 10px;
+  }
+
+  .collections {
+    width: 420px;
+    margin: 0 auto;
+  }
+
+  .collections .collection-para {
+    display: grid;
+    gap: 0.5rem;
+  }
+
+  .collection-para a::after {
+    left: 140px;
+    /* right: 0px; */
+  }
+
+  .collection-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    height: inherit;
+    width: 300px;
+  }
+
+  .collect-card {
+    height: 300px;
+    width: 200px;
+  }
+
+  .location-list {
+    width: 420px;
+    margin: 2rem auto;
+  }
+  .popular-locations {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 0.5rem 0rem;
+    align-items: center;
+  }
+
+  .location-card {
+    justify-self: center;
+    /* border: 2px solid red; */
+    width: 300px;
+  }
+
+  .location-card:nth-of-type(even) {
+    display: none;
+  }
+
+  .get-app {
+    width: 425px;
+  }
+
+  .getapp-two-screen {
+    gap: 0rem;
+  }
+
+  .getapp-details {
+    width: 420px;
+    margin: 0 auto;
+    justify-self: center;
+  }
+
+  .getapp-details form input[type="email"] {
+    width: 260px;
+  }
+
+  .getapp-image {
+    display: none;
+  }
+
+  .explore-options {
+    width: 425px;
+  }
+
+  .explore-card p {
+    font-size: 18px;
+  }
+
+  .page-footer {
+    width: 425px;
+  }
+
+  .footer-width {
+    width: 425px;
+    margin: 0 auto;
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+  /* .copyright {
+    width: 425px;
+  } */
+}
+
+@media screen and (max-width: 321px) {
+  header {
+    width: 100%;
+    height: 320px;
+  }
+  nav {
+    width: 320px;
+  }
+
+  main {
+    width: 320px;
+    /* margin: 2rem ; */
+  }
+  .top-content {
+    width: 300px;
+  }
+  .main-head {
+    font-size: 2.5rem;
+  }
+  .top-content p {
+    font-size: 1rem;
+  }
+  .top-content form {
+    width: 300px;
+    height: 30px;
+  }
+  form #location {
+    width: 80px;
+    font-size: 0.6rem;
+  }
+  .search-icon {
+    font-size: 0.6rem;
+  }
+  .top-post {
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.7rem;
+    justify-content: space-between;
+  }
+  .card {
+    width: 140px;
+    height: 200px;
+    overflow: hidden;
+  }
+  .card h6 {
+    position: relative;
+    top: -20px;
+    padding: 0px 0px 10px 10px;
+    font-size: 1rem;
+  }
+  .card p {
+    top: -30px;
+    font-size: 0.5rem;
+  }
+  .collections {
+    width: 320px;
+    margin: 0 auto;
+  }
+  .collection-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    height: inherit;
+    width: 120px;
+  }
+  .collections .collection-para {
+    display: grid;
+    gap: 0.5rem;
+    width: 300px;
+    margin: 1rem 0.5rem;
+  }
+  .collect-card {
+    height: 200px;
+    width: 150px;
+  }
+  .location-list {
+    width: 300px;
+    margin: 2rem auto;
+  }
+  .get-app {
+    width: 300px;
+  }
+
+  .getapp-two-screen {
+    gap: 0rem;
+  }
+
+  .getapp-details {
+    width: 300px;
+    margin: 0 auto;
+    justify-self: center;
+  }
+
+  .inputfields {
+    display: grid;
+    gap: 0;
+  }
+  .getapp-details form input[type="submit"] {
+    position: relative;
+    top: -20px;
+  }
+
+  .getapp-form + p,
+  .getapp-store {
+    position: relative;
+    top: -30px;
+  }
+  .explore-options {
+    width: 320px;
+  }
+  .explore-card {
+    width: 280px;
+  }
+
+  .explore-card p {
+    font-size: 0.9rem;
+  }
+
+  .explore-card::after {
+    right: 20px;
+    top: 30px;
+  }
+  .page-footer {
+    width: 320px;
+  }
+
+  .footer-width {
+    width: 320px;
+    margin: 0 auto;
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .footer-content-card {
+    /* justify-self: center; */
+  }
+}
