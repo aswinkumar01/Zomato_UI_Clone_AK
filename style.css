@@ -584,7 +584,7 @@ main {
 }
 
 .footer-width {
-  margin: 0 auto;
+  /* margin: 0 auto; */
   width: 1200px;
   border: 1px solid transparent;
 }
@@ -1072,7 +1072,7 @@ main {
 
   .footer-width {
     width: 600px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
   }
 
   .footer-content {
@@ -1258,7 +1258,6 @@ main {
 
   .footer-width {
     width: 425px;
-    margin: 0 auto;
   }
 
   .footer-content {
@@ -1268,6 +1267,153 @@ main {
   /* .copyright {
     width: 425px;
   } */
+}
+
+@media screen and (max-width: 376px) {
+  header {
+    width: 100%;
+    height: 320px;
+  }
+  nav {
+    width: 320px;
+  }
+
+  main {
+    width: 320px;
+    /* margin: 2rem ; */
+  }
+  .top-content {
+    width: 300px;
+  }
+  .main-head {
+    font-size: 2.5rem;
+  }
+  .top-content p {
+    font-size: 1rem;
+  }
+  .top-content form {
+    width: 300px;
+    height: 30px;
+  }
+  form #location {
+    width: 80px;
+    font-size: 0.6rem;
+  }
+  .search-icon {
+    font-size: 0.6rem;
+  }
+  .top-post {
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.7rem;
+    justify-content: space-between;
+  }
+  .card {
+    width: 140px;
+    height: 200px;
+    overflow: hidden;
+  }
+  .card h6 {
+    position: relative;
+    top: -20px;
+    padding: 0px 0px 10px 10px;
+    font-size: 1rem;
+  }
+  .card p {
+    top: -30px;
+    font-size: 0.5rem;
+  }
+  .collections {
+    width: 320px;
+    margin: 0 auto;
+  }
+  .collection-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    height: inherit;
+    width: 120px;
+  }
+  .collections .collection-para {
+    display: grid;
+    gap: 0.5rem;
+    width: 300px;
+    margin: 1rem 0.5rem;
+  }
+  .collect-card {
+    height: 200px;
+    width: 150px;
+  }
+  .location-list {
+    width: 300px;
+    margin: 2rem auto;
+  }
+  .get-app {
+    width: 300px;
+  }
+
+  .getapp-two-screen {
+    gap: 0rem;
+  }
+
+  .getapp-details {
+    width: 300px;
+    margin: 0 auto;
+    justify-self: center;
+  }
+
+  .inputfields {
+    display: grid;
+    gap: 0;
+  }
+  .getapp-details form input[type="submit"] {
+    position: relative;
+    top: -20px;
+  }
+
+  .getapp-form + p,
+  .getapp-store {
+    position: relative;
+    top: -30px;
+  }
+  .explore-options {
+    width: 320px;
+  }
+  .explore-card {
+    width: 280px;
+  }
+
+  .explore-card p {
+    font-size: 0.9rem;
+  }
+
+  .explore-card::after {
+    right: 20px;
+    top: 30px;
+  }
+  .page-footer {
+    width: 300px;
+    margin: 0px auto;
+  }
+
+  .footer-width {
+    width: 300px;
+    padding: 10px;
+  }
+
+  .footer-content {
+    grid-template-columns: repeat(1, 1fr);
+    /* gap: 0.5rem; */
+  }
+
+  .footer-content-card h6 {
+    font-size: 15px;
+  }
+
+  .footer-content-card p {
+    font-size: 12px;
+  }
 }
 
 @media screen and (max-width: 321px) {
